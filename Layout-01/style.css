@@ -1,0 +1,117 @@
+/* Resets */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Fonts */
+@font-face {
+  font-family: "Sallim";
+  src: url(./assets/fonts/Sallim.ttf);
+}
+@font-face {
+  font-family: "Anticva";
+  src: url(./assets/fonts/Anticva-Regular.otf);
+}
+
+/* Variables */
+:root {
+  --bg: #1e2321;
+}
+
+/* Mobile Styles */
+
+body{
+    background-color: var(--bg);
+}
+
+.grid{
+    display: grid;
+    grid-template-columns: repeat(12,1fr);
+}
+header{
+    padding: 48px;
+    align-items: center;
+}
+header h1{
+    font-family: "Sallim";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 2.25rem;
+    color: #fff;
+
+}
+
+header nav a{
+    text-decoration: none;
+    font-family: "Anticva";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 0.75rem;
+    color: #fff;
+}
+header nav{
+    grid-column: -1;
+}
+header nav > * + *{
+    margin-left: 1rem;
+}
+main{
+    grid-template-rows: auto auto auto auto auto;
+    overflow: hidden;
+}
+main img{
+    grid-row: 1/-2;
+    grid-column: 1/-1;
+    justify-self:center;
+}
+main h2{
+    font-family: "Anticva";
+    font-style: normal;
+    font-weight: 400;
+    font-size:16.8rem;
+    color: #fff;
+    grid-column: 1/-1;
+    grid-row:3;
+    place-self: center;
+    z-index: 1;
+}
+
+main p{
+    font-family: "Anticva";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.5rem;
+    line-height: 100%;
+    color: #fff;
+    padding-bottom: 2rem;
+    grid-row:2;
+    grid-column: -4/ span 3;
+    z-index: 1;
+}
+footer .left p{
+    font-family: "Anticva";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 0.75rem;
+    color: #fff;
+}
+footer{
+    padding: 48px;
+}
+footer .left,
+footer .right{
+    display: flex;
+    align-items: center;
+}
+footer .left{
+    gap: 1rem;
+    grid-column: 1/ span 3;
+}
+footer .right{
+    gap: 1.5rem;
+    grid-column: -1;
+}
