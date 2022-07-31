@@ -115,3 +115,30 @@ footer .right{
     gap: 1.5rem;
     grid-column: -1;
 }
+
+@media screen and (max-width: 1350px) {
+    main h2 {
+      font-size: 20vw;
+    }
+    main p {
+      font-size: 1rem;
+      padding: 1rem;
+    }
+  }
+  
+  @media screen and (max-width: 960px) {
+    .grid {
+      grid-template-columns: repeat(6, 1fr);
+    }
+  
+    main p {
+      grid-column: 1 / -1;
+      justify-self: end;
+    }
+  
+    header,
+    footer {
+      padding: 28px;
+    }
+  }
+  
