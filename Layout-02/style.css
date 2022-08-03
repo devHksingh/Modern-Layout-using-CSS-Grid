@@ -27,7 +27,7 @@ html {
     place-items: center;
   }
   
-  
+
   main {
     overflow: hidden;
   }
@@ -95,4 +95,47 @@ html {
   
   .info {
     max-width: 300px;
+  }
+
+  @media screen and(min-width:800px) {
+    .grid{
+        grid-template-columns: repeat(12,1fr);
+        grid-template-rows: auto auto auto auto;
+        grid-template-areas: 
+        ". title1 title1 title1 title1 title1 title1 title1 .      .      .      ."
+        ". .      .       .     title2 title2 title2 title2 title2 title2 title2 ."
+        ". info   info    info  title2 title2 title2 title2 title2 title2 title2 ."
+        ". info   info    info  .      .      .      .      .      .      .      .";
+    }
+
+    main{
+        max-width: 1200px;
+        margin: auto  auto 40px auto;
+    }
+    main .title1,
+    main .title2{
+        font-size: 20.5rem;
+    }
+
+    main > .image{
+        grid-column: 1/-1;
+        grid-row: 1/-1;
+    }
+
+    .title1{
+        grid-area: title1;
+    }
+
+    .title2{
+        grid-area: title2;
+
+    }
+    .info{
+        grid-area: info;
+        align-self: end;
+    }
+    .child__img{
+        top:-4.7rem;
+        right:-4.7rem;
+    }
   }
