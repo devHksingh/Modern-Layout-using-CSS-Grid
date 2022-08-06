@@ -57,3 +57,45 @@ main .text p span {
 main .text p span:nth-child(3) {
     -webkit-text-fill-color: var(--primary);
   }
+
+  /* Mobile Styles */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
+  
+  .grid > * {
+    grid-column: 1 / -1;
+  }
+  
+  .grid .image {
+    justify-self: center;
+  }
+  
+  main .text p span {
+    font-size: 8rem;
+  }
+  
+  /* Small Tablet Styles */
+  @media screen and (min-width: 600px) {
+    .grid {
+      grid-template-columns: repeat(6, 1fr);
+      align-items: center;
+    }
+  
+    .grid > * {
+      grid-row: 1;
+    }
+  
+    main .image {
+      grid-column: 1 / span 4;
+    }
+  
+    main .text {
+      justify-self: end;
+    }
+  
+    main .text p span {
+      font-size: 12rem;
+    }
+  }
